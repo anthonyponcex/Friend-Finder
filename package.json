@@ -1,0 +1,12 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "An application to match you to a friend with similar characetrists",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Anthony Ponce",
+  "license": "ISC"
+}
