@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friend Finder - Survey</title>
+	
+<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script> 
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+	<h1> Survey Questions</h1>
+	</div>
+
+	<div class="row">
+		<h2> About You </h2>
+		<p>Name (Required)</p>
+		<p><input type="text" class="form-control" id="name" placeholder="ex. John Doe"></p>
+		<p>Link to Photo Image (required)<p>
+		<p><input type="text" class="form-control" id="image": placeholder="Insert seflie url here">
+		<h2>Statement 1</h2>
+		<p>I consider myself to be creative and open-minded</p>
+		<p><select class="form-control" id="q1">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+		</p>
+
+		<h2>Statement 2</h2>
+		<p>I believe I am the next Steve Jobs</p>
+		<p><select class="form-control" id="q2">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+		</p>
+
+		<h2>Statment 3</h2>
+		<p>I like cats</p>
+		<p><select class="form-control" id="q3">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+		</p>
+
+		<h2>Statement 4</h2>
+		<p>Slow-dripped iced coffee is better than non drip</p>
+		<p><select class="form-control" id="q4">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			 </select>
+		</p>
+
+		<h2>Statement 5</h2>
+		<p>I believe the earth is flat</p>
+		<p><select class="form-control" id="q5">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			 </select>
+		</p>
+
+		<h2>Statement 6</h2>
+		<p>Trump is awesome</p>
+		<p><select class="form-control" id="q6">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			 </select>
+		</p>
+
+		<h2>Question 7</h2>
+		<p>I believe The Smiths are arguably the best band of all time</p>
+		<p><select class="form-control" id="q7">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+		</p>
+
+		<h2>Question 8</h2>
+		<p>I am gonna pass the UCI Coding Bootcamp with flying colors</p>
+		<p><select class="form-control" id="q8">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			 </select>
+		</p>
+
+		<h2>Question 9</h2>
+		<p>I like eggs.</p>
+		<p><select class="form-control" id="q9">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			 </select>
+		</p>
+
+		<h2>Question 10</h2>
+		<p>Anthony is the greatest person!</p>
+		<p><select class="form-control" id="q10">
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+		</p>
+		
+		<button type="button" class="btn btn-primary btn-lg" id="submit">Submit</button>
+
+
+	</div>
+
+	<script type="text/javascript">
+		$("#submit").on("click", function(event) {
+			event.preventDefault();
+			var newFriend = {
+				// name: $("#name").val().trim(),
+				// image: $("image").val().trim(),
+				scores: [ 
+				$("#q1").val(),
+				$("#q2").val(),
+				$("#q3").val(),
+				$("#q4").val(),
+				$("#q5").val(),
+				$("#q6").val(),
+				$("#q7").val(),
+				$("#q8").val(),
+				$("#q9").val(),
+				$("#q10").val()
+				]		
+			};
+
+		var currentURL = window.location.origin;
+		//updating api to add a newFriend 
+		$.post(currentURL + "/api/friends", newFriend)
+		.done(function(data) {
+			console.log(data);
+			alert("Adding a Friend!");
+		});
+	});
+	</script>
+
+</body>
+</html>
